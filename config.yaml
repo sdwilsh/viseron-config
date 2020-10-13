@@ -1,0 +1,40 @@
+cameras:
+  - name: Front Porch
+    mqtt_name: viseron_front_porch
+    host: 10.67.0.10
+    port: 554
+    username: !secret reolink_username
+    password: !secret reolink_password
+    path: /h264Preview_01_main
+    width: 2560
+    height: 1920
+    fps: 30
+  - name: Front-North
+    mqtt_name: viseron_front_north
+    host: 10.67.0.11
+    port: 554
+    username: !secret reolink_username
+    password: !secret reolink_password
+    path: /h264Preview_01_main
+    width: 2560
+    height: 1920
+    fps: 30
+logging:
+  level: debug
+motion_detection:
+  interval: 0.5
+  threshold: 10
+  frames: 1
+  trigger_detector: true
+mqtt:
+  broker: !secret mqtt_broker
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+object_detection:
+  type: darknet
+  labels:
+    - label: person
+      confidence: 0.8
+recorder:
+  lookback: 5
+  retain: 14
