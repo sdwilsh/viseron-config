@@ -9,6 +9,11 @@ cameras:
     width: 2560
     height: 1920
     fps: 30
+    substream:
+      path: /h264Preview_01_sub
+      width: 640
+      height: 480
+      fps: 4
   - name: Front-North
     mqtt_name: viseron_front_north
     host: 10.67.0.11
@@ -19,6 +24,11 @@ cameras:
     width: 2560
     height: 1920
     fps: 30
+    substream:
+      path: /h264Preview_01_sub
+      width: 640
+      height: 480
+      fps: 4
 logging:
   level: debug
 motion_detection:
