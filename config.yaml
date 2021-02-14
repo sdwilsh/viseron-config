@@ -52,3 +52,7 @@ object_detection:
 recorder:
   lookback: 5
   retain: 14
+  segments_folder: /segments
+  thumbnail:
+    save_to_disk: True
+    send_to_mqtt: True
