@@ -43,6 +43,10 @@ mqtt:
 object_detection:
   type: darknet
   labels:
+    - label: cat
+      confidence: 0.8
+    - label: dog
+      confidence: 0.8
     - label: person
       confidence: 0.8
 recorder:
